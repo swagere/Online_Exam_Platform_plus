@@ -3,16 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kve</groupId>
-    <artifactId>dubbo_consumer_login</artifactId>
+    <artifactId>dubbo_interface</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dubbo_consumer_login</name>
-    <description>dubbo_consumer_login</description>
+    <name>dubbo_interface</name>
+    <description>dubbo_interface</description>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
     </properties>
 
     <dependencies>
@@ -149,34 +149,8 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.1.0.Final</version>
+            <version>6.2.0.Final</version>
         </dependency>
-
-        <!--dubbo-->
-        <dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-recipes</artifactId>
-            <version>2.12.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.kve</groupId>
-            <artifactId>dubbo_interface</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>
@@ -208,7 +182,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.kve.dubbo_consumer_login.DubboConsumerLoginApplication</mainClass>
+                    <mainClass>com.kve.dubbo_interface.DubboInterfaceApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

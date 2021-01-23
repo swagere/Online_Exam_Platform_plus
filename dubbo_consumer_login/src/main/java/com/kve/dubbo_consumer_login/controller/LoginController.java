@@ -1,12 +1,12 @@
 package com.kve.dubbo_consumer_login.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.kve.dubbo_interface.config.exception.AjaxResponse;
+import com.kve.dubbo_interface.config.exception.CustomException;
+import com.kve.dubbo_interface.config.exception.CustomExceptionType;
+import com.kve.dubbo_interface.model.Login;
+import com.kve.dubbo_interface.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
-import org.sicnuafcs.online_exam_platform.config.exception.AjaxResponse;
-import org.sicnuafcs.online_exam_platform.config.exception.CustomException;
-import org.sicnuafcs.online_exam_platform.config.exception.CustomExceptionType;
-import org.sicnuafcs.online_exam_platform.model.Login;
-import org.sicnuafcs.online_exam_platform.service.LoginService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,8 +27,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/login_api/login")
 public class LoginController {
-
-    @Autowired
+    @Reference
     LoginService loginService;
 
     //学号或者工号加密码

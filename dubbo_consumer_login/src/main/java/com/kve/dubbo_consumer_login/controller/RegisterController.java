@@ -1,11 +1,11 @@
 package com.kve.dubbo_consumer_login.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.kve.dubbo_interface.config.exception.AjaxResponse;
+import com.kve.dubbo_interface.model.Student;
+import com.kve.dubbo_interface.model.Teacher;
+import com.kve.dubbo_interface.service.RegisterService;
 import lombok.extern.slf4j.Slf4j;
-import org.sicnuafcs.online_exam_platform.config.exception.AjaxResponse;
-import org.sicnuafcs.online_exam_platform.model.Student;
-import org.sicnuafcs.online_exam_platform.model.Teacher;
-import org.sicnuafcs.online_exam_platform.service.RegisterService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,8 +23,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/login_api/register")
 public class RegisterController {
-
-    @Autowired
+    @Reference
     RegisterService registerService;
 
     @PostMapping("/student")

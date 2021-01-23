@@ -1,10 +1,10 @@
-package com.kve.dubbo_consumer_login;
+package com.kve.dubbo_interface;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DubboConsumerLoginApplicationTests {
+class DubboInterfaceApplicationTests {
 
     @Test
     void contextLoads() {

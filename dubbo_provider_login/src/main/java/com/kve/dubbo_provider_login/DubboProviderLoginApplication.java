@@ -1,15 +1,15 @@
-package com.kve.dubbo_consumer_login;
+package com.kve.dubbo_provider_login;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @EnableDubbo
 @SpringBootApplication
-public class DubboConsumerLoginApplication {
+public class DubboProviderLoginApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DubboConsumerLoginApplication.class, args);
+        SpringApplication.run(DubboProviderLoginApplication.class, args);
     }
-
 }
