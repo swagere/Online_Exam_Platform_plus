@@ -3,7 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>demo</module>
+        <module>dubbo_consumer_login</module>
+        <module>dubbo_provider_login</module>
+        <module>dubbo_interface</module>
     </modules>
 
     <parent>
