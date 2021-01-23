@@ -22,16 +22,14 @@ import org.springframework.stereotype.Component;
 @Service
 @Component
 public class LoginServiceImpl implements LoginService {
-//    @Autowired
+    @Autowired
     StudentRepository studentRepository;
-//    @Autowired
+    @Autowired
     TeacherRepository teacherRepository;
 
     //学号或者工号加密码
     @Override
     public Login LoginId(Login login) {
-        System.out.println(login);
-
         Teacher tea = teacherRepository.findTeacherByTea_id(login.getKeyword());
         Student stu = studentRepository.findStudentByStu_id(login.getKeyword());
         if (tea != null || stu != null) {
