@@ -24,7 +24,7 @@ import org.springframework.stereotype.Component;
 public class LoginServiceImpl implements LoginService {
 //    @Autowired
     StudentRepository studentRepository;
-    @Autowired
+//    @Autowired
     TeacherRepository teacherRepository;
 
     //学号或者工号加密码
