@@ -178,6 +178,7 @@
                 <version>2.3.7.RELEASE</version>
                 <configuration>
                     <mainClass>com.kve.dubbo_interface.DubboInterfaceApplication</mainClass>
+                    <classifier>exec</classifier>
                 </configuration>
                 <executions>
                     <execution>

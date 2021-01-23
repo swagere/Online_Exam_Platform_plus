@@ -1,9 +1,11 @@
 package com.kve.dubbo_interface.dao;
 
 import com.kve.dubbo_interface.model.Student;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+@Mapper
 public interface StudentRepository extends JpaRepository<Student, String> {
     @Query("select u.stu_id from Student u where u.telephone = ?1")
     String findStu_id_idByPhone(String phone);

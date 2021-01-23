@@ -11,6 +11,7 @@ import com.kve.dubbo_interface.model.Teacher;
 import com.kve.dubbo_interface.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,12 +24,13 @@ import org.springframework.stereotype.Component;
 public class LoginServiceImpl implements LoginService {
 //    @Autowired
     StudentRepository studentRepository;
-//    @Autowired
+    @Autowired
     TeacherRepository teacherRepository;
 
     //学号或者工号加密码
     @Override
     public Login LoginId(Login login) {
+        System.out.println(login);
 
         Teacher tea = teacherRepository.findTeacherByTea_id(login.getKeyword());
         Student stu = studentRepository.findStudentByStu_id(login.getKeyword());

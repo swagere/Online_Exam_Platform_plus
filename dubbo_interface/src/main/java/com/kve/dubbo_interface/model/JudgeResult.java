@@ -4,12 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class JudgeResult {
+public class JudgeResult implements Serializable {
     private String hand_in_time;    //提交时间
     private String status;      //状态
     private Integer score;      //分数`

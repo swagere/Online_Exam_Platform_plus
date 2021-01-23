@@ -31,4 +31,4 @@ spring:
     default-encoding: utf-8
 
 server:
-  port: 10087
+  port: 10088
