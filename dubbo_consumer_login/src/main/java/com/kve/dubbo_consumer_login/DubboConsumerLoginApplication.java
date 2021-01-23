@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableDubbo
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.kve")
 public class DubboConsumerLoginApplication {
 
     public static void main(String[] args) {

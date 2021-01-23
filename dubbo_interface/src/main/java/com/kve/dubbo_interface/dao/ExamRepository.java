@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import javax.transaction.Transactional;
 import java.util.List;
-
-//import org.sicnuafcs.online_exam_platform.model.Question;
-
+/**
+ * common
+ */
 public interface ExamRepository extends JpaRepository<Exam, String> {
     @Query("select u from Exam u where u.exam_id in (:examIdList) and u.progress_status = (:status) order by u.begin_time desc ")
     List<Exam> findExamsByExam_idAAndProgress_status(List<Long> examIdList, Exam.ProgressStatus status);

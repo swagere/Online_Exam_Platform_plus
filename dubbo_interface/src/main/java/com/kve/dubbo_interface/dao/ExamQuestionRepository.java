@@ -10,7 +10,9 @@ import org.springframework.data.jpa.repository.Query;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * common
+ */
 public interface ExamQuestionRepository extends JpaRepository<ExamQuestion, String> {
     @Query("select u from ExamQuestion u where u.exam_id = (:exam_id) and u.type = (:type)")
     ArrayList<ExamQuestion> findByExam_idAndType(Long exam_id, Question.Type type);

@@ -10,7 +10,9 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-
+/**
+ * common
+ */
 public interface  StuExamRepository extends JpaRepository<StuExam, String> {
     @Query("select u from StuExam u where u.exam_id = ?1 and u.stu_id = ?2")
     ArrayList<StuExam> getByExam_idAndStu_id(long exam_id, String stu_id);

@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Timestamp;
 import java.util.List;
-
+/**
+ * common
+ */
 @Repository
 public interface CourseRepository extends JpaRepository<Course, String> {
     @Query("select u from Course u where u.co_id in (:coIdList)")

@@ -3,7 +3,9 @@ package com.kve.dubbo_interface.dao;
 import com.kve.dubbo_interface.model.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
+/**
+ * common
+ */
 public interface QuestionRepository extends JpaRepository<Question, Long> {
     @Query("select answer from Question  where question_id = ?1")
     String findAnswerById(long question_id);

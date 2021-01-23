@@ -13,7 +13,7 @@ import org.springframework.session.events.SessionExpiredEvent;
  */
 
 /**
- * login_api
+ * common
  */
 
 @Configuration

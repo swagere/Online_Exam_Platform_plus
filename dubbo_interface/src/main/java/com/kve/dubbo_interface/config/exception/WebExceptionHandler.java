@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 /**
- * login_api
+ * common
  */
 
 @ControllerAdvice   //标明全局异常处理类

@@ -7,8 +7,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-
+/**
+ * common
+ */
 public interface TeacherRepository extends JpaRepository<Teacher, String> {
     @Query(value = "SELECT tea_id FROM teacher WHERE telephone = ?", nativeQuery = true)
     String findTea_idByPhone(String Phone);

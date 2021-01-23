@@ -5,7 +5,7 @@ import com.kve.dubbo_interface.model.Student;
 import com.kve.dubbo_interface.model.Teacher;
 
 /**
- * login_api
+ * common
  */
 
 public interface RegisterService {

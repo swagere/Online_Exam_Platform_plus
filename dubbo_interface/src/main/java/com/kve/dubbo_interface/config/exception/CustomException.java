@@ -5,7 +5,7 @@ package com.kve.dubbo_interface.config.exception;
  */
 
 /**
- * login_api
+ * common
  */
 
 public class CustomException extends RuntimeException {

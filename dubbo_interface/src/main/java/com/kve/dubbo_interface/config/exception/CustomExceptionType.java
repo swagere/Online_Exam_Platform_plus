@@ -7,7 +7,7 @@ package com.kve.dubbo_interface.config.exception;
  */
 
 /**
- * login_api
+ * common
  */
 
 public enum CustomExceptionType {

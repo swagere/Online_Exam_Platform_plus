@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-
+/**
+ * common
+ */
 public interface StuCoRepository extends JpaRepository<StuCo, StuCoPK> {
 
     @Query("select u from StuCo u where u.stu_id = ?1")

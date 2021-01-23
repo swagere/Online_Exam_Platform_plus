@@ -7,7 +7,7 @@ import lombok.Data;
  */
 
 /**
- * login_api
+ * common
  */
 
 @Data
