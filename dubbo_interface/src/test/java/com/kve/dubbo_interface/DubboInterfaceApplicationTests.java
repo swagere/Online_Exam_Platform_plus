@@ -1,6 +1,6 @@
 package com.kve.dubbo_interface;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
