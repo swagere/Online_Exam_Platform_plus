@@ -8,6 +8,7 @@ import com.kve.dubbo_interface.dao.StudentRepository;
 import com.kve.dubbo_interface.dao.TeacherRepository;
 import com.kve.dubbo_interface.model.Student;
 import com.kve.dubbo_interface.model.Teacher;
+import com.kve.dubbo_interface.service.PersonalDataService;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ import java.util.Map;
 @Slf4j
 @Controller
 @RequestMapping("/login_api/lostPassword")
-public class LostPasswordController<PersonalDataService> {
+public class LostPasswordController {
     @Reference
     PersonalDataService personalDataService;
     @Autowired

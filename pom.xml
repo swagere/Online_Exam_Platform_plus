@@ -7,6 +7,7 @@
         <module>dubbo_provider_login</module>
         <module>dubbo_interface</module>
         <module>dubbo_provider_email</module>
+        <module>dubbo_provider_personal</module>
     </modules>
 
     <parent>

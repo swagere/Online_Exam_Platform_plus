@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kve</groupId>
-    <artifactId>dubbo_provider_email</artifactId>
+    <artifactId>dubbo_provider_personal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dubbo_provider_email</name>
-    <description>dubbo_provider_email</description>
+    <name>dubbo_provider_personal</name>
+    <description>dubbo_provider_personal</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -202,7 +202,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.kve.dubbo_provider_emai.DubboProviderEmaiApplication</mainClass>
+                    <mainClass>com.kve.dubbo_provider_personal.DubboProviderPersonalApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
