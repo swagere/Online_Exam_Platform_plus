@@ -8,6 +8,11 @@ spring:
     #    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
     initialization-mode: always
+
+    hikari:
+      max-lifetime: 18000000
+      minimum-idle: 0
+      maximum-pool-size: 100
   jpa:
     hibernate:
       #      ddl-auto: update
