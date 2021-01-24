@@ -4,6 +4,7 @@ package com.kve.dubbo_interface.service;
 import com.kve.dubbo_interface.model.Student;
 import com.kve.dubbo_interface.model.Teacher;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -11,8 +12,8 @@ import java.util.Optional;
  * common
  */
 public interface PersonalDataService {
-     Optional<Teacher> getTeacherData(String ID);
-     Optional<Student> getStudentData(String ID);
+     Teacher getTeacherData(String ID);
+     Student getStudentData(String ID);
      Teacher updateTeacherPassword(String ID, Map<String, Object> params);
      Student updateStudentPassword(String ID, Map<String, Object> params);
      Teacher editTeacherBaseData(String ID, Teacher newTeacherData);

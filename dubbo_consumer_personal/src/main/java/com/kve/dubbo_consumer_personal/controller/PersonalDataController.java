@@ -11,13 +11,10 @@ import com.kve.dubbo_interface.service.PersonalDataService;
 import com.kve.dubbo_interface.service.RegisterService;
 import com.kve.dubbo_interface.service.SendMailService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
-import java.util.Optional;
 
 /**
  * consumer_personal
@@ -47,8 +44,8 @@ public class PersonalDataController {
         Map m = (Map) request.getSession().getAttribute("userInfo");
         String ID = (String) m.get("id");
 
-        Optional<Teacher> teacherData = personalDataService.getTeacherData(ID);
-        if(teacherData.isPresent())
+        Teacher teacherData = personalDataService.getTeacherData(ID);
+        if(teacherData != null)
             return AjaxResponse.success(teacherData);//返回teacher类Data
         else
             throw new CustomException(CustomExceptionType.SYSTEM_ERROR, "查找个人资料错误");//返回500
@@ -64,8 +61,8 @@ public class PersonalDataController {
         authorityCheckService.checkStudentAuthority(request.getSession().getAttribute("userInfo"));
         Map m = (Map) request.getSession().getAttribute("userInfo");
         String ID = (String) m.get("id");
-        Optional<Student> studentData = personalDataService.getStudentData(ID);
-        if(studentData.isPresent())
+        Student studentData = personalDataService.getStudentData(ID);
+        if(studentData != null)
             return AjaxResponse.success(studentData);//返回teacher类
         else
             throw new CustomException(CustomExceptionType.SYSTEM_ERROR, "查找个人资料错误");//返回500

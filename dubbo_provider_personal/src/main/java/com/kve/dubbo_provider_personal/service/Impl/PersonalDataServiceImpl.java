@@ -19,7 +19,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import javax.persistence.NonUniqueResultException;
 import java.util.Map;
-import java.util.Optional;
 
 /**
  * provider_personal
@@ -29,8 +28,6 @@ import java.util.Optional;
 @Service
 @Component
 public class PersonalDataServiceImpl implements PersonalDataService {
-
-
     @Resource
     TeacherRepository teacherRepository;
     @Resource
@@ -41,21 +38,21 @@ public class PersonalDataServiceImpl implements PersonalDataService {
     MajorRepository majorRepository;
 
     @Override
-    public Optional<Teacher> getTeacherData(String ID) {
-        Optional<Teacher> teacherList = teacherRepository.findById(ID);
-        teacherList.get().setPassword(null);
-        teacherList.get().setCode(null);
-        return teacherList;
+    public Teacher getTeacherData(String ID) {
+        Teacher teacher = teacherRepository.findTeacherByTea_id(ID);
+        teacher.setPassword(null);
+        teacher.setCode(null);
+        return teacher;
     }
 
     @Override
-    public Optional<Student> getStudentData(String ID) {
-        Optional<Student> studentList = studentRepository.findById(ID);
-        studentList.get().setPassword(null);
-        studentList.get().setCode(null);
-        String majorId = studentList.get().getMajor_id();
-        studentList.get().setMajor_id(majorRepository.getNameByMajor_id(majorId));
-        return studentList;
+    public Student getStudentData(String ID) {
+        Student student = studentRepository.findStudentByStu_id(ID);
+        student.setPassword(null);
+        student.setCode(null);
+        String majorId = student.getMajor_id();
+        student.setMajor_id(majorRepository.getNameByMajor_id(majorId));
+        return student;
     }
 
     @Override

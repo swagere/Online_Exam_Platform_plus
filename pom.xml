@@ -9,6 +9,7 @@
         <module>dubbo_provider_personal</module>
         <module>dubbo_provider_email</module>
         <module>dubbo_consumer_personal</module>
+        <module>dubbo_provider_course</module>
     </modules>
 
     <parent>

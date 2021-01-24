@@ -1,10 +1,10 @@
-package com.kve.dubbo_consumer_personal;
+package com.kve.dubbo_provider_course;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DubboConsumerPersonalApplicationTests {
+class DubboProviderCourseApplicationTests {
 
     @Test
     void contextLoads() {

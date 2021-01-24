@@ -1,7 +1,6 @@
 package com.kve.dubbo_interface.dao;
 
 import com.kve.dubbo_interface.model.Teacher;
-import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
